@@ -1,0 +1,46 @@
+{
+  "name": "discordjs-template",
+  "version": "1.1.0",
+  "private": true,
+  "type": "module",
+  "description": "A template for Discord.js bots",
+  "main": "src/app.js",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "scripts": {
+    "start:dev": "npm run lint && cross-env NODE_ENV=development node src/app.js",
+    "start:prod": "cross-env NODE_ENV=production node src/app.js",
+    "start": "npm run start:dev",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "setup-template": "node scripts/setup-template.js",
+    "generate-config": "node scripts/generate-config.js",
+    "pull-and-restart": "node scripts/pull-and-restart.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NullDev/DiscordJS-Template.git"
+  },
+  "bugs": {
+    "url": "https://github.com/NullDev/DiscordJS-Template/issues"
+  },
+  "homepage": "https://github.com/NullDev/DiscordJS-Template#readme",
+  "author": "NullDev",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.22.5",
+    "@babel/eslint-parser": "^7.22.5",
+    "cross-env": "^7.0.3",
+    "eslint": "^8.44.0"
+  },
+  "dependencies": {
+    "better-sqlite3": "^8.4.0",
+    "check-dependencies": "^1.1.0",
+    "discord.js": "^14.11.0",
+    "fastify": "^4.21.0",
+    "i18n-light": "^0.5.4",
+    "node-cron": "^3.0.2",
+    "quick.db": "^9.1.6"
+  }
+}
